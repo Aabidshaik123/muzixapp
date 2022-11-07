@@ -1,0 +1,45 @@
+
+
+
+.music-banner-image {
+    background-image: url('https://cdn.dribbble.com/users/4878986/screenshots/17409554/media/02b3d59c158f577d06ae70c143e830e0.png?compress=1&resize=1200x900&vertical=top');
+    height: 100vh;
+    background-size: cover;
+}
+
+.banner-heading{
+    color: #e9ed7b;
+    font-style: italic;
+    font-size: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+.banner-outline-button-2 {
+    width: 130px;
+    color: #e9ed7b;
+    border-style: solid;
+    border-color: #e9ed7b;
+    background-color: transparent;
+}
+
+.nav-icon{
+    height:40px;
+    width:40px;
+    border-radius:50%;
+ }
+ 
+ .nav-link{
+    color: rgb(221, 158, 56);
+    font-weight: bold;
+ }
+
+ .nav-item{
+    font-size:18px;
+    font-style:italic;
+    font-family:system-ui,  'Segoe UI',  'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 8px;
+    color: #d0b200;
+
+ }
+ 
