@@ -1,0 +1,57 @@
+.track-button{
+    height:45px;
+    width:45px;
+}
+
+.track-img{
+    height:55px;
+    width:55px;
+
+}
+
+
+.user-welcome{
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+.side-headings{
+color:white;
+font-size: 20px;
+
+font-weight: 800;
+}
+
+
+mat-card{
+    border:2px solid;
+    height:180px;
+    width:150px;
+    /*border: 2px solid white;*/
+    border-radius:10%;
+    background-color: transparent;
+  }
+  .card-img{
+    height:120px;
+    width:150px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+  }
+  .card-text-align{
+    padding:0px 15px 3px 6px;
+    
+}
+.album-name{
+    margin-top: -5px;
+    color:white;
+    font-size:18px;
+}
+
+.card-item {
+    text-align: center;
+    background-color: white;
+    width: 140px;
+    border-radius: 9px;
+    padding: 16px;
+    margin: 15px;
+}
