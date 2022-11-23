@@ -69,7 +69,7 @@
                             <div class="form-group pt-3">
                                 <div class="input-field" [class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">
                                     <span class="fa fa-lock p-2"></span>
-                                    <input formControlName="password" class="input" [type]="type" placeholder="Password">
+                                    <input formControlName="password" class="input" [type]="type" placeholder="password">
                                     <span (click)="hideShowPass()" class="fa fa-eye-slash" class="fa {{eyeIcon}}"></span>
                                 </div>
                                 <small *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')" class="text-danger">*password is required</small>

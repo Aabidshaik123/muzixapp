@@ -6,7 +6,7 @@ mat-sidenav{
 }
 mat-sidenav-content{
     height:100vh;
-    background-color: black;
+    background-color: rgb(249, 244, 244);
     
    
 }
@@ -36,4 +36,17 @@ mat-icon{
     height:55px;
     width:55px;
 
+}
+
+.album-name{
+    margin-top: -5px;
+    color:white;
+    font-size:18px;
+}
+
+.badge-ele{
+    font-weight: lighter;
+    margin-right: 8px;
+    font-size:12px;
+    padding:6px;
 }

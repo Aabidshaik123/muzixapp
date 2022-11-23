@@ -10,7 +10,7 @@
                 <mat-icon (click)="sidebar.toggle()"  >menu</mat-icon>
                     <div class="box">
                         <mat-form-field class="example-full-width" appearance="fill">
-                        <input matInput type="search" placeholder="search your favorite"  class="searchfield">     
+                        <input matInput [(ngModel)]="searchQuery" (keyup)="searchArtists()" type="search" placeholder="search your favorite"  class="searchfield">     
                         </mat-form-field>
                         <mat-icon>search</mat-icon>
                          
@@ -22,8 +22,39 @@
             </div>
             <div class="main">
                 
-                <app-recommendation></app-recommendation>
+               
+                    <div class="row">
+                        <div class="col-12 mt-2" *ngFor="let artist of artists">
+                            <div class="card bg-secondary text-white "  >
+                                <div class="card-header">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-3">
+                                            <img [src]="artist.images[0].url" class="card-img"/>
+                                        </div>
+                                        <div class="col-md-9 ">
+                                              <h1 class="album-name">
+                                                    <a routerLink="/artists/{{artist.id}}">{{artist.name}}
+                                                    </a></h1>
+                                              
+                                                <span>Followers: {{artist.followers.total | number}}</span>  
+                                                <p>Genres:
+                                                    <span class="badge text-bg-success badge-ele badge-font-weight:  none;" *ngFor = "let genre of artist.genres ">
+                                                        {{genre}} </span>
+                                                </p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+
+
+
                 
+                <!-- <app-recommendation></app-recommendation>
+                 -->
+
             </div>
     
         </div>

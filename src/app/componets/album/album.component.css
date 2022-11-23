@@ -1,0 +1,20 @@
+.mainHead_name{
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+}
+.icon-fav{
+    padding: 0px;
+    margin: none;
+    margin-bottom: -7px;
+    border: none 0px;
+}
+.icon-fav:hover{
+    background-color: pink;
+}
+.icon-fav:focus{
+    background-color: pink;
+}
+.track-name{
+    font-size:18px;
+}

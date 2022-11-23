@@ -20,7 +20,9 @@ import {MatInputModule} from '@angular/material/input';
 import { SidebarComponent } from './componets/sidebar/sidebar.component';
 import { RecommendationComponent } from './componets/recommendation/recommendation.component';
 import { FavouriteComponent } from './componets/favourite/favourite.component';
-
+import { FormsModule } from '@angular/forms';
+import { ArtistComponent } from './componets/artist/artist.component';
+import { AlbumComponent } from './componets/album/album.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { FavouriteComponent } from './componets/favourite/favourite.component';
     SidebarComponent,
     RecommendationComponent,
     FavouriteComponent,
+    ArtistComponent,
+    AlbumComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ import { FavouriteComponent } from './componets/favourite/favourite.component';
     MatIconModule,
     MatButtonModule,MatToolbarModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
