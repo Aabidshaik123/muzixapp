@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import{FormBuilder,FormControl,FormGroup,Validators} from '@angular/forms'
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { Note } from 'src/Model/Note';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +17,8 @@ export class LoginComponent implements OnInit {
   isText: boolean=false;
   eyeIcon:string="fa-eye-slash";
   loginForm!: FormGroup;
+
+ 
    
   constructor(private fb:FormBuilder,private auth:AuthService,private router:Router) { }
 
@@ -36,13 +40,14 @@ export class LoginComponent implements OnInit {
 
   onLogin(){
     if(this.loginForm.valid){
-      console.log(this.loginForm.value)
-
+    
+    
       this.auth.login(this.loginForm.value)
       .subscribe({
         next:(res)=>{
           alert(res.message);
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['recommanded']);
+          console.log(this.loginForm.value)
         },
         error:(err)=>{
           alert(err?.error.message)
@@ -59,5 +64,4 @@ export class LoginComponent implements OnInit {
   
 
 }
-
 

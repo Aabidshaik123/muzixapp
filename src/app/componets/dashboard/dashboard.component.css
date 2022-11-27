@@ -6,7 +6,7 @@ mat-sidenav{
 }
 mat-sidenav-content{
     height:100vh;
-    background-color: rgb(249, 244, 244);
+    background-color: white;
     
    
 }
@@ -49,4 +49,26 @@ mat-icon{
     margin-right: 8px;
     font-size:12px;
     padding:6px;
+}
+
+input
+{
+    border:none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+.input-field{
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid rgb(25, 163, 179);
+    color:#4343ff;
+}
+
+.heading{
+    
 }

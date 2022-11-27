@@ -8,7 +8,9 @@ import { Observable } from 'rxjs';
 export class SpotifyService {
 
 
-  private authorizationKey = 'Bearer BQB25ST9PxoGNahSLaW_DPT47nGTHUwCoNxWcdJlUAF1J9TfF57RJ4NcC9w2rnTBnnkC7rWhtIcXTubgOGJcKWMLWwuhvUeYrMJFtLYX4xMo7vIpg5l5eVSOZ5cx8DiU7HoxFRdNLDZr7_O-1G55WA8Pa7d_1s877kDIC3UqXdAHkJyH2WunFLCE1kV5voyq29M';
+  private authorizationKey = 'Bearer ';
+  
+
   
    private httpOptions  ={
     headers: new HttpHeaders(
@@ -52,5 +54,13 @@ export class SpotifyService {
       return this._httpClient.get<any>(tracksurl, this.httpOptions);
  
     }
+
+    //get all albums for recommendation
+    public getRecommendationAlbum():Observable<any>{
+      let albumUrl =`https://api.spotify.com/v1/artists/5sSzCxHtgL82pYDvx2QyEU/albums`;
+      
+      return this._httpClient.get<any>(albumUrl, this.httpOptions);
+
+    }
 
 }

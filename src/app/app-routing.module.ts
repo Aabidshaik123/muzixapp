@@ -6,6 +6,7 @@ import { DashboardComponent } from './componets/dashboard/dashboard.component';
 import { FavouriteComponent } from './componets/favourite/favourite.component';
 import { HomeComponent } from './componets/home/home.component';
 import { LoginComponent } from './componets/login/login.component';
+import { RecommendationComponent } from './componets/recommendation/recommendation.component';
 import { SignupComponent } from './componets/signup/signup.component';
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   {path:'favourite',component:FavouriteComponent},
   {path:'artists/:id',component:ArtistComponent},
-  {path:'albums/:id',component:AlbumComponent}
+  {path:'albums/:id',component:AlbumComponent},
+  {path:'recommanded',component:RecommendationComponent}
 ];
 
 @NgModule({

@@ -6,38 +6,37 @@
     <mat-sidenav-content>
         <div class="content">
             <div class="toolbar">
-                <mat-toolbar  class="bg-light">
+                <mat-toolbar  class="bg-dark">
                 <mat-icon (click)="sidebar.toggle()"  >menu</mat-icon>
-                    <div class="box">
-                        <mat-form-field class="example-full-width" appearance="fill">
-                        <input matInput [(ngModel)]="searchQuery" (keyup)="searchArtists()" type="search" placeholder="search your favorite"  class="searchfield">     
-                        </mat-form-field>
-                        <mat-icon>search</mat-icon>
-                         
-                    </div>
+                    
                     
                 </mat-toolbar>
                     
     
             </div>
             <div class="main">
-                
-               
+                    <div class="d-flex flex-column justify-content-center">
+                        <h1 class="heading mt-3"> Search For Your Favourite Artist</h1>
+                    <div class="input-field w-50">
+                        <span class="fa fa-search p-2"></span>
+                        <input matInput [(ngModel)]="searchQuery" (keyup)="searchArtists()" type="search" placeholder="search your favorite"  class="searchfield"> 
+                    </div>
+                </div>
                     <div class="row">
                         <div class="col-12 mt-2" *ngFor="let artist of artists">
-                            <div class="card bg-secondary text-white "  >
+                            <div class="card  text-white shadow" style="background-color: #323f4b;" >
                                 <div class="card-header">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-3">
+                                    <div class="row align-items-center shadow-md">
+                                        <div class="col-md-2">
                                             <img [src]="artist.images[0].url" class="card-img"/>
                                         </div>
-                                        <div class="col-md-9 ">
+                                        <div class="col-md-10 ">
                                               <h1 class="album-name">
                                                     <a routerLink="/artists/{{artist.id}}">{{artist.name}}
                                                     </a></h1>
                                               
                                                 <span>Followers: {{artist.followers.total | number}}</span>  
-                                                <p>Genres:
+                                                <p class="mt-3">Genres:
                                                     <span class="badge text-bg-success badge-ele badge-font-weight:  none;" *ngFor = "let genre of artist.genres ">
                                                         {{genre}} </span>
                                                 </p>

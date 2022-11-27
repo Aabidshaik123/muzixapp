@@ -23,6 +23,15 @@
     background-color: transparent;
 }
 
+.banner-outline-button-2:hover{
+
+    color: rgb(52, 25, 225);
+    background-color: #e9ed7b;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 800;
+}
+
 .nav-icon{
     height:40px;
     width:40px;

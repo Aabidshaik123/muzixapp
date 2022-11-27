@@ -9,13 +9,13 @@ import { AuthService } from 'src/app/services/auth.service';
 export class SidebarComponent implements OnInit {
 
   users!: any[];
+
+
   constructor(public authservice:AuthService) { }
 
   ngOnInit(): void {
-
-    this.authservice.getAllUsers().subscribe(data=>{console.log(data); this.users=[...data]});
-
     
+  
   }
 
 }

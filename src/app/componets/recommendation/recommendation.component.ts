@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpotifyService } from 'src/app/services/spotify.service';
 
 @Component({
   selector: 'app-recommendation',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecommendationComponent implements OnInit {
 
-  constructor() { }
+  public albums:any
+  constructor(private _spotfyService:SpotifyService) { }
 
   ngOnInit(): void {
+    this._spotfyService.getRecommendationAlbum().subscribe(data =>{this.albums = data.items})
   }
 
 }
