@@ -21,13 +21,17 @@
                          
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-3" *ngFor="let album of albums">
+                                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let album of albums">
                                         <div class="card mt-3" >
                                             <div class="card-body bg-secondary text-white text-center">
                                                 
                                                 <img [src]="album.images[0].url" class="img-fluid img-thumbnail"/>
                                                 <p class="mt-3"> {{album.name}} </p>
+                                                <div>
                                                 <a routerLink="/albums/{{album.id}}" class="btn btn-outline-light">View album</a>
+                                                
+                                                <span class="btn icon-fav" (click)="addFav(album)"><mat-icon >favorite</mat-icon></span>
+                                            </div>
                                             </div>
                                         </div>   
                                     </div>

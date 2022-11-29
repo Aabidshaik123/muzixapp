@@ -14,8 +14,47 @@
     
             </div>
             <div class="main">
-                <p class="text-light">favourite works!</p>
                 
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let album of y">
+            <div class="card mt-3" >
+                <div class="card-body bg-secondary text-white text-center shadow-md">
+                    
+                    <img [src]="album.images[0].url" class="img-fluid img-thumbnail"/>
+                    <p class="mt-3"> {{album.name}} </p>
+
+                    <div class="d-flex justify-content-center">
+                        <a routerLink="/albums/{{album.id}}" class="btn btn-outline-light">View album</a>
+                        
+                    
+                    </div>
+                    
+                </div>
+            </div>   
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let album of n">
+            <div class="card mt-3" >
+                <div class="card-body bg-secondary text-white text-center shadow-md">
+                    
+                    <img [src]="album.images[0].url" class="img-fluid img-thumbnail"/>
+                    <p class="mt-3"> {{album.name}} </p>
+
+                    <div class="d-flex justify-content-center">
+                        <a routerLink="/albums/{{album.id}}" class="btn btn-outline-light">View album</a>
+                        
+                    
+                    </div>
+                    
+                </div>
+            </div>   
+        </div>
+
+    </div>
+</div>
                 
             </div>
     

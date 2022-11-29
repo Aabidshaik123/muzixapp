@@ -2,8 +2,9 @@
     
     <div class="user">
         <img src="https://res.cloudinary.com/bbj8735/image/upload/v1667779498/muzix/imguser_npjgvr.jpg" alt=""/>
-        <h4 class="name">username</h4>
-        <p class="mail">UserEmail@gmail.com</p>
+
+        <h4 class="name mt-3">Welcome, <span style="color: #70bce3; font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: larger;"> {{parsedetailes.username}} </span></h4>
+        
     </div>
 
     <div class="menu">
@@ -26,7 +27,7 @@
                 <span >Favorite</span>
             </button>
             
-            <button mat-button class="menu-button" routerLink="/login">
+            <button mat-button class="menu-button" routerLink="/login" (click)="logOut()">
                 <mat-icon>exit_to_app</mat-icon>
                 <span >Signout</span>
             </button>

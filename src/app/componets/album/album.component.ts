@@ -39,10 +39,5 @@ export class AlbumComponent implements OnInit {
     this._router.navigate([`/artists/${this.album.artists[0].id}`])
     }
 
-    addFav(){
-      this._spotifyservice.getAllTracks(this.albumId).subscribe(data => {
-        console.log(this.albumId)
-      });
-      
-    }
+    
 }

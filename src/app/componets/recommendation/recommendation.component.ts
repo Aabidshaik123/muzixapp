@@ -9,10 +9,20 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class RecommendationComponent implements OnInit {
 
   public albums:any
+  public favData: Array<any> = [];
   constructor(private _spotfyService:SpotifyService) { }
 
   ngOnInit(): void {
     this._spotfyService.getRecommendationAlbum().subscribe(data =>{this.albums = data.items})
+
+    
+  }
+
+  addFav(album: any){
+    console.log(album);
+    this.favData.push(album);
+    localStorage.setItem("favouriteRecData",JSON.stringify(this.favData));
+
   }
 
 }

@@ -16,3 +16,16 @@
     font-size:12px;
     padding:6px;
 }
+
+.icon-fav{
+    padding: 0px;
+    margin: none;
+    margin-bottom: -7px;
+    border: none 0px;
+}
+.icon-fav:hover{
+    background-color: pink;
+}
+.icon-fav:focus{
+    background-color: pink;
+}

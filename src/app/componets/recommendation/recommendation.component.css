@@ -17,7 +17,7 @@
 }
 .side-headings{
 color:white;
-font-size: 20px;
+font-size: 30px;
 
 font-weight: 800;
 }
@@ -96,3 +96,16 @@ mat-icon{
     width:55px;
 
 }
+
+.icon-fav{
+    padding: 0px;
+    margin: none;
+    margin-bottom: -7px;
+    border: none 0px;
+}
+.icon-fav:hover{
+    background-color: pink;
+}
+.icon-fav:focus{
+    background-color: pink;
+} 

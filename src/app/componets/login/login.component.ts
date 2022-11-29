@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import{FormBuilder,FormControl,FormGroup,Validators} from '@angular/forms'
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
-import { Note } from 'src/Model/Note';
 import { __values } from 'tslib';
 
 @Component({
@@ -48,6 +47,7 @@ export class LoginComponent implements OnInit {
           alert(res.message);
           this.router.navigate(['recommanded']);
           console.log(this.loginForm.value)
+          localStorage.setItem("logindetailes",JSON.stringify(this.loginForm.value))
         },
         error:(err)=>{
           alert(err?.error.message)

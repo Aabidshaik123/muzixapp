@@ -13,6 +13,7 @@ export class ArtistComponent implements OnInit {
   public artist:any;
   public albums:any;
   
+  public favData:Array<any> = [];
 
 
   constructor(private _activatedRoots:ActivatedRoute ,
@@ -39,6 +40,13 @@ export class ArtistComponent implements OnInit {
   }
   public backToArtist(){
     this._router.navigate([`/dashboard`])
+    }
+
+    addFav(album: any){
+      console.log(album);
+      this.favData.push(album);
+    localStorage.setItem("favouriteData",JSON.stringify(this.favData));
+     console.log(this.favData) 
     }
 
 }
